@@ -1,17 +1,13 @@
 import greenfoot.*;
 
 /**
- * Write a description of class DogCatcher here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * The Dog Catcher is trying to catch Sue...run! Has 2 images for left and right.
  */
 public class DogCatcher extends Actor
 {
     private GreenfootImage left;
     private GreenfootImage right;
-    private int currentRotate;
-    
+        
     
     /**
      * CONSTRUCTOR 
@@ -26,8 +22,7 @@ public class DogCatcher extends Actor
     
     
     /**
-     * Act - do whatever the DogCatcher wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act method for the Dog Catcher
      */
     public void act() 
     {
@@ -35,35 +30,35 @@ public class DogCatcher extends Actor
     }
     
     
+    /**
+     * The following method acts as the AI for the dog catcher. The first IF statement 
+     * checks the X coordinate of the dog. If the dogs X coordinate is smaller the catcher
+     * faces left and if X greater then catcher faces right. After setting the corrrect 
+     * direction of the dog catcher (by changing its image) it will then find the Y coordinate
+     * of the dog and set rotation and move towards the correct direction.
+     */
     public void findDog()
     {
-        MyWorld world = (MyWorld)getWorld();
-        int dogX = world.dogLocationX();
-        int dogY = world.dogLocationY();
-        int maxRotate = 50;
-        int minRotate = -50;
+        MyWorld world = (MyWorld)getWorld();        // Reference to find the Dog in the World
+        int dogX = world.dogLocationX();            // Variable for dog's X coordinate 
+        int dogY = world.dogLocationY();            // Variable for dog's Y coordinate
         
-        
-        
-        if (dogX < getX())    // Facing LEFT
+        // 
+        if (dogX < getX())    // Dog Catcher Facing LEFT
         {
             setImage(left);
             
-            if (dogY < getY() && (currentRotate < maxRotate))          // Y-Less than (northwest)
+            if (dogY < getY())     // Y-Less than (northwest)
             {
-                setRotation(getRotation() -2);
-                currentRotate = currentRotate + 2;
+                setRotation(25);
                 setLocation((getX()-2), (getY()-1));
             }
-            else if (dogY > getY() && (currentRotate > minRotate))     //Y-Greater than (southwest)
+            else if (dogY > getY())     //Y-Greater than (southwest)
             {
-                setRotation(getRotation() +2);
-                currentRotate = currentRotate -2;
-                
+                setRotation(-25);
                 setLocation((getX()-2), (getY()+1));
-                //move(-2);
             }
-            else if (dogY == getY())
+            else if (dogY == getY())     // Equal Y coordinates - move left
             {
                 setRotation(0);
                 setLocation((getX() -2), getY());
@@ -72,17 +67,22 @@ public class DogCatcher extends Actor
         else if (dogX > getX())   // Facing RIGHT
         {
             setImage(right);
-            move(2);
-            if (dogY < getY() && (currentRotate < maxRotate))        // Y-Less than (northeast)
+            
+            if (dogY < getY())        // Y-Less than (northeast)
             {
-                setRotation(getRotation() +2);
-                currentRotate = currentRotate -2;
+                setRotation(-25);
+                setLocation((getX()+2), (getY()-1));
             }
-            else if (dogY > getY() && (currentRotate > minRotate))    // Y-Greater than (southeast)
+            else if (dogY > getY())    // Y-Greater than (southeast)
             {
-                setRotation(getRotation() -2);
-                currentRotate = currentRotate +2;
-                
+                setRotation(25);
+                setLocation((getX()+2), (getY()+1));
+                              
+            }
+            else if (dogY == getY())   // Equal Y coordinates - move right
+            {
+                setRotation(0);
+                setLocation((getX() +2), getY());
             }
         }
           
