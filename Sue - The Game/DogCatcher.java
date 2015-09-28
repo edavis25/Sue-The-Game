@@ -85,6 +85,20 @@ public class DogCatcher extends Actor
                 setLocation((getX() +2), getY());
             }
         }
+        else if (dogX == getX())
+        {
+            if (dogY < getY())
+            {
+                setRotation(0);
+                setLocation((getX()), getY()-2);
+            }
+            else if (dogY > getY())
+            {
+                setRotation(0);
+                setLocation((getX()), getY()+2);
+            }
+        }
+        
           
         
         
