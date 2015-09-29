@@ -25,9 +25,34 @@ public class DogCatcher extends Actor
      */
     public void act() 
     {
-        findDog();
+        //findDog();
+        checkHydrants();
     }
     
+    
+    /**
+     * Method to check if the hydrants have been peed on or not.
+     */
+    public void checkHydrants()
+    {
+       MyWorld world = (MyWorld)getWorld();
+       Hydrant northeastHydrant = world.getNortheastHydrant();
+              
+       
+       //northeastHydrant.checkPeedOn();
+       
+       if (northeastHydrant.checkPeedOn() == true)
+       {
+           move(19);
+        }
+        //***EXAMPLE*  
+        //Space spaceWorld = (Space) getWorld();  // get a reference to the world
+        //Counter counter = spaceWorld.getCounter();  // get a reference to the counter
+        //counter.bumpCount(5);  
+        //*END EXAMPLE***
+
+        
+    }
     
     /**
      * The following method acts as the AI for the dog catcher. The first IF statement 
@@ -100,13 +125,6 @@ public class DogCatcher extends Actor
         }                                                
     }
     
-    /**
-     * Method to check if the hydrants have been peed on or not.
-     */
-    public void checkHydrants()
-    {
-        MyWorld world = (MyWorld)getWorld();
-        
-    }
+    
 }
 

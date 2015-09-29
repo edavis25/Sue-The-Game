@@ -60,5 +60,14 @@ public class MyWorld extends World
     {
         return dog.getY();
     }
-      
+    
+    /**
+     * Returning Hydrants method
+     */
+    public Hydrant getNortheastHydrant()
+    {
+        return northeastHydrant;
+    }
+    
+    
 }

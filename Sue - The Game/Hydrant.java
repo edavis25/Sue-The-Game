@@ -24,9 +24,23 @@ public class Hydrant extends Actor
      */
     public void act() 
     {
+        checkPeedOn();
+    }
+    
+    /**
+     * Method to return PeedOn boolean to other classes
+     */
+    public boolean checkPeedOn()
+    {
         if (isTouching(Puddle.class))
         {
             peedOn = true;
+            return peedOn;
         }
-    }    
+        else
+        {
+            peedOn = false;
+            return peedOn;
+        }
+    }
 }
