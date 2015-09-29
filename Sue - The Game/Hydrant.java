@@ -8,12 +8,25 @@ import greenfoot.*;
  */
 public class Hydrant extends Actor
 {
+    private boolean peedOn;
+        
+    /**
+     * Constructor
+     */
+    public Hydrant()
+    {
+        peedOn = false;
+    }
+       
     /**
      * Act - do whatever the Hydrant wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
+        if (isTouching(Puddle.class))
+        {
+            peedOn = true;
+        }
     }    
 }

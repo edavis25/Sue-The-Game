@@ -7,8 +7,7 @@ public class DogCatcher extends Actor
 {
     private GreenfootImage left;
     private GreenfootImage right;
-        
-    
+                
     /**
      * CONSTRUCTOR 
      */
@@ -17,7 +16,7 @@ public class DogCatcher extends Actor
         left = new GreenfootImage("dogcatcherleft.png");
         right = new GreenfootImage("dogcatcherright.png");
         setImage(left);
-        
+                
     }
     
     
@@ -39,11 +38,11 @@ public class DogCatcher extends Actor
      */
     public void findDog()
     {
-        MyWorld world = (MyWorld)getWorld();        // Reference to find the Dog in the World
-        int dogX = world.dogLocationX();            // Variable for dog's X coordinate 
-        int dogY = world.dogLocationY();            // Variable for dog's Y coordinate
+        MyWorld world = (MyWorld)getWorld();        //<-- Reference to find the Dog in the World
         
-        // 
+        int dogX = world.dogLocationX();            //<-- Calls methods from MyWorld to return the dog's
+        int dogY = world.dogLocationY();            // X and Y coordiantes. Assign them to variables.
+                      
         if (dogX < getX())    // Dog Catcher Facing LEFT
         {
             setImage(left);
@@ -87,6 +86,7 @@ public class DogCatcher extends Actor
         }
         else if (dogX == getX())
         {
+            
             if (dogY < getY())
             {
                 setRotation(0);
@@ -97,14 +97,16 @@ public class DogCatcher extends Actor
                 setRotation(0);
                 setLocation((getX()), getY()+2);
             }
-        }
+        }                                                
+    }
+    
+    /**
+     * Method to check if the hydrants have been peed on or not.
+     */
+    public void checkHydrants()
+    {
+        MyWorld world = (MyWorld)getWorld();
         
-          
-        
-        
-        
-        
-       
     }
 }
 

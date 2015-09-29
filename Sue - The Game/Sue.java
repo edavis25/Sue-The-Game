@@ -65,7 +65,7 @@ public class Sue extends Actor
         animationCounter = animationCounter + 1;
         if (animationCounter == 10)
         {
-            setRotation(20);
+            setRotation(10);
         }
         else if (animationCounter == 20)
         {
@@ -73,7 +73,7 @@ public class Sue extends Actor
         }
         else if (animationCounter == 30)
         {
-            setRotation(-20);
+            setRotation(-10);
         }
         else if (animationCounter == 40)
         {
