@@ -8,9 +8,12 @@ import greenfoot.*;
  */
 public class Bone extends Actor
 {
+    
+    
     public Bone()
     {
         setRotation(Greenfoot.getRandomNumber(360));
+        
     }
     
     

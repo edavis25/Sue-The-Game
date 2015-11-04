@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ act()
+comment0.text=\r\n\ Act\ -\ Call\ the\ followDogCatcher\ method\ so\ the\ speech\ bubble\ follows\ the\ path\ of\ the\ dog\ \r\n\ catcher.\ The\ speech\ bubble\ will\ only\ move\ left\ or\ right\ on\ the\ X\ axis.\r\n
+comment1.params=
+comment1.target=void\ followDogCatcher()
+comment2.params=X\ Y
+comment2.target=void\ moveTowards(int,\ int)
+numComments=3

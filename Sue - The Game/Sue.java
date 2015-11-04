@@ -40,22 +40,22 @@ public class Sue extends Actor
         //LEFT
         if (Greenfoot.isKeyDown("left"))
         {
-            setLocation(getX()-3, getY());
+            setLocation(getX()-2, getY());
             walkAnimation();
         }
         if (Greenfoot.isKeyDown("right"))
         {
-            setLocation(getX()+3, getY());
+            setLocation(getX()+2, getY());
             walkAnimation();
         }
         if (Greenfoot.isKeyDown("up"))
         {
-            setLocation(getX(), getY()-3);
+            setLocation(getX(), getY()-2);
             walkAnimation();
         }
         if (Greenfoot.isKeyDown("down"))
         {
-            setLocation(getX(), getY()+3);
+            setLocation(getX(), getY()+2);
             walkAnimation();
         }
     }
