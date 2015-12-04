@@ -1,7 +1,9 @@
 import greenfoot.*;
 
 /**
- * The Dog Catcher is trying to catch Sue...run! Has 2 images for left and right.
+ * The Dog Catcher is our villain. He is trying to catch Sue because he's a fascist jerk! 
+ * 1) Has 2 images to face either left or right.
+ * 2) Becomes "Busy" when there is pee on a hydrant he must clean.
  */
 public class DogCatcher extends Actor
 {
@@ -9,6 +11,7 @@ public class DogCatcher extends Actor
     private GreenfootImage right;
     private boolean busy;
     private int cleanPuddleCounter;
+    private int speed;
            
                     
     /**
@@ -20,6 +23,7 @@ public class DogCatcher extends Actor
         right = new GreenfootImage("dogcatcherright.png");
         setImage(left);
         busy = false;
+        speed = 1;
                 
     }
     
@@ -33,6 +37,7 @@ public class DogCatcher extends Actor
         {
             findDog();
         }
+                
         checkHydrants();
        
     }
@@ -50,20 +55,24 @@ public class DogCatcher extends Actor
        Hydrant southeastHydrant = world.getSoutheastHydrant(); 
             
        
-       if ((northeastHydrant.checkPeedOn() == true) && (busy != true))
+       if ((northeastHydrant.checkPeedOn() == true) ) //&& (busy != true) - removed
        {
+           busy = true;
            moveTowards(northeastHydrant.getX(), northeastHydrant.getY());
            cleanPee();                     
-       }             
-       else if (northwestHydrant.checkPeedOn() == true)
+       } 
+       
+       if (northwestHydrant.checkPeedOn() == true)
        {
-           moveTowards(northwestHydrant.getX(), northeastHydrant.getY());
            busy = true;
+           moveTowards(northwestHydrant.getX(), northeastHydrant.getY());
+           cleanPee();
         }
-        else if (southeastHydrant.checkPeedOn() == true)
+       if (southeastHydrant.checkPeedOn() == true)
         {
-            moveTowards(southeastHydrant.getX(), southeastHydrant.getY());
             busy = true;
+            moveTowards(southeastHydrant.getX(), southeastHydrant.getY());
+            cleanPee();
         }
         
        
@@ -76,6 +85,7 @@ public class DogCatcher extends Actor
         
     }
          
+    
     public void findDog()
     {
         MyWorld world = (MyWorld)getWorld();   //<-- Casts world to call the dogLocation methods from
@@ -86,6 +96,7 @@ public class DogCatcher extends Actor
         
         moveTowards(dogX, dogY);    //<-- Call moveTowards method with dog's coordinates as parameters
     }
+    
     
     /**
      * This method tells the Dog Catcher where to move given a set of 2 coordinates. It can be used 
@@ -98,7 +109,7 @@ public class DogCatcher extends Actor
     public void moveTowards(int X, int Y)
     {
               
-        int speed = 1;
+        //int speed = 1;
         
         if (X < getX())   // Dog Catcher Facing LEFT
         {
@@ -156,16 +167,24 @@ public class DogCatcher extends Actor
     
     
     
-    public void cleanPee()
+    /**
+     * cleanPee  - Method used by the Dog Catcher when touching a Puddle. References the World to create the Speech Bubble and references the Sue class to change
+     * the alreadyPeed instance variable in the Sue class by calling the setAlreadyPeedFalse method. Begin incrementing the cleanPuddleCounter, create a speech bubble,
+     * and when the counter reaches a set amount (time) it will remove the puddle and the bubble and the Dog Catcher will resume chasing the dog.
+     * 
+     */
+    private void cleanPee()
     {
+           
         // Reference to the world
         MyWorld myworld = (MyWorld)getWorld();
         
+        // Reference to the dog (used to change the 
+        Sue dog = myworld.getDogReference();
         
         if (isTouching(Puddle.class))
         {
-            
-            
+                        
             // Create a Speech Bubble
             if (isTouching(SpeechBubble.class) == false)
             {
@@ -173,16 +192,23 @@ public class DogCatcher extends Actor
                 myworld.addObject(speechBubble, getX(), getY() - 75);
             }
             
-            
+            // Finishes cleaning the pee when the counter hits correct value.
             if (cleanPuddleCounter == 200)
             {
                 removeTouching(Puddle.class);
                 removeTouching(SpeechBubble.class);
                 cleanPuddleCounter = 0;
+                busy = false;
+                
+                // Calls the setAlreadyPeedFalse method in the Sue class to change a boolean in the Sue class.
+                dog.setAlreadyPeedFalse();
             }
-            cleanPuddleCounter += 1;            
+            
+            cleanPuddleCounter += 1;
         }
     }
+    
+    
     
 }
 

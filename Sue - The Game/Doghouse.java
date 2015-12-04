@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Doghouse here.
+ * Doghouse
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Eric Davis
+ * @version Version 1.0
  */
 public class Doghouse extends Actor
 {

@@ -18,14 +18,18 @@ public class Hydrant extends Actor
         peedOn = false;
     }
        
+    
+    
     /**
      * Act - do whatever the Hydrant wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        checkPeedOn();
+        //checkPeedOn();
     }
+    
+    
     
     /**
      * Method to return PeedOn boolean to other classes

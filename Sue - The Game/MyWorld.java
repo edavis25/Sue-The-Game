@@ -16,12 +16,12 @@ public class MyWorld extends World
     
     
     /**
-     * Constructor for objects of class MyWorld.
+     * Constructor for objects of class MyWorld. Paint order sets the layering order when objects are on top of one another.
      * 
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with a cell size of 1x1 pixels.
         super(1250, 900, 1);
         setPaintOrder(Sue.class, SpeechBubble.class, Hydrant.class);
         
@@ -40,19 +40,24 @@ public class MyWorld extends World
         dog = new Sue();
         addObject(dog, 170, 650);
         
+        // Add the dog catcher and create a variable to store it in
         dogCatcher = new DogCatcher();
         addObject(dogCatcher, 1000, 250);
         
+        
         // Adds hydrants and give them each a variable
-            // NORTHEAST
+             // NORTHEAST HYDRANT
         northeastHydrant = new Hydrant();
         addObject(northeastHydrant, 900, 200);
-            // SOUTHEAST
+        
+            // SOUTHEAST HYDRANT
         southeastHydrant = new Hydrant();
         addObject(southeastHydrant, 1000, 650);
-            // NORTHWEST
+        
+            // NORTHWEST HYDRANT
         northwestHydrant = new Hydrant();
         addObject(northwestHydrant, 300, 150);
+        
         
         //int i = 5;
         //showText(""+i, 100, 100);
@@ -110,4 +115,11 @@ public class MyWorld extends World
     
     
     
+    /**
+     * Method used to return Sue (the dog) as a reference.
+     */
+    public Sue getDogReference()
+    {
+        return dog;
+    }
 }
