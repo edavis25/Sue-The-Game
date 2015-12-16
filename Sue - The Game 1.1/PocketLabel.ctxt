@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PocketLabel()
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ PocketLabel\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=x
+comment2.target=void\ adjustPocketScore(int)
+comment2.text=\r\n\ adjustPocketScore(int\ x)\ \ -\ Adjusts\ the\ pocket\ score\ with\ whatever\ parameter\ is\ input\ when\ called.\r\n
+comment3.params=
+comment3.target=int\ getPocketScore()
+comment3.text=\r\n\ getPocketScore()\ \ -\ Public\ method\ used\ to\ return\ the\ Pocket\ Label's\ current\ score.\r\n
+comment4.params=
+comment4.target=int\ getMaxAmount()
+comment4.text=\r\n\ getMaxAmount()\ \ -\ Public\ method\ returning\ the\ constant\ that\ determines\ max\ amount\ allowed\ in\ pocket.\r\n
+comment5.params=
+comment5.target=void\ updatePocketScore()
+comment5.text=\r\n\ updatePocketScore()\ \ -\ Formats\ and\ draws\ the\ string\ that\ is\ shown\ in\ the\ main\ pocket\ Label.\r\n\ \ \r\n
+comment6.params=
+comment6.target=void\ showLabel()
+numComments=7

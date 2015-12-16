@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DogCatcher()
+comment0.text=\r\n\ CONSTRUCTOR\ \r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ method\ for\ the\ Dog\ Catcher\r\n
+comment2.params=
+comment2.target=void\ checkHydrants()
+comment2.text=\r\n\ Method\ to\ check\ if\ the\ hydrants\ have\ been\ peed\ on\ or\ not.\r\n
+comment3.params=
+comment3.target=void\ findDog()
+comment4.params=X\ Y
+comment4.target=void\ moveTowards(int,\ int)
+comment4.text=\r\n\ This\ method\ tells\ the\ Dog\ Catcher\ where\ to\ move\ given\ a\ set\ of\ 2\ coordinates.\ It\ can\ be\ used\ \r\n\ to\ chase\ the\ dog\ or\ it\ can\ be\ used\ with\ 2\ static\ coordinates.\ The\ parameters\ of\ "X"\ and\ "Y"\ \r\n\ should\ be\ the\ x\ and\ y\ coordinates\ of\ the\ object\ the\ dog\ catcher\ needs\ to\ move\ towards.\ These\r\n\ parameters\ are\ compared\ with\ the\ Dog\ Catcher's\ current\ location.\ The\ 1\ added\ to\ the\ coordinates\ on\r\n\ some\ of\ the\ If\ tests\ makes\ sure\ the\ Dog\ Catcher\ can\ move\ to\ every\ pixel\ and\ not\ glitch\ out\ because\r\n\ he\ can't\ hit\ a\ specific\ pixel\ because\ his\ speed\ is\ 2\ pixels.\r\n
+comment5.params=
+comment5.target=void\ cleanPee()
+comment5.text=\r\n\ cleanPee\ \ -\ Method\ used\ by\ the\ Dog\ Catcher\ when\ touching\ a\ Puddle.\ References\ the\ World\ to\ create\ the\ Speech\ Bubble\ and\ references\ the\ Sue\ class\ to\ change\r\n\ the\ alreadyPeed\ instance\ variable\ in\ the\ Sue\ class\ by\ calling\ the\ setAlreadyPeedFalse\ method.\ Begin\ incrementing\ the\ cleanPuddleCounter,\ create\ a\ speech\ bubble,\r\n\ and\ when\ the\ counter\ reaches\ a\ set\ amount\ (time)\ it\ will\ remove\ the\ puddle\ and\ the\ bubble\ and\ the\ Dog\ Catcher\ will\ resume\ chasing\ the\ dog.\r\n\ \r\n
+comment6.params=
+comment6.target=void\ createBubble()
+comment6.text=\r\n\ \ createBubble\ \ -\ Create\ the\ Speech\ bubble\ by\ setting\ a\ new\ image.\ Test\ to\ see\ if\ catcher\r\n\ \ is\ facing\ left\ or\ right\ and\ then\ set\ the\ image\ to\ leftWithBubble\ or\ rightWithBubble.\r\n\ \ \r\n\ \ ***\ REVIEW\ FOR\ DELETION\ ***\ (bubble\ creation\ by\ switching\ images.\ delete\ instance\ variables\ that\ it\ uses\ \r\n
+numComments=7
