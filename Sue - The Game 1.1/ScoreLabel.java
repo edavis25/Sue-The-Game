@@ -3,10 +3,10 @@ import greenfoot.*;
 import java.awt.Font;
 
 /**
- * Write a description of class ScoreLabel here.
+ * ScoreLabel - Used to display and keep track of the total score.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Eric Davis 
+ * @version Version 1.0
  */
 public class ScoreLabel extends Actor
 {

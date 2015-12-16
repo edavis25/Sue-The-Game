@@ -15,9 +15,10 @@ comment12.target=void\ setYellowBoneCreated(boolean)
 comment12.text=\ \r\n\ ***********REVIEW\ FOR\ DELETION**********\ (the\ object\ made\ public.)\r\n\ \r\n\ getScoreLabelReference\ -\ Method\ used\ to\ return\ the\ Score\ Label\ as\ an\ object.\r\n
 comment2.params=
 comment2.target=void\ createBones()
+comment2.text=\r\n\ createBones\ \ \ \ \ \ -\ Method\ called\ by\ the\ world's\ act\ procedure.\ This\ will\ generate\ a\ random\ number\ and\ then\ compare\ it\ to\ a\ range\ of\ values\ to\ create\ a\ bone\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ The\ hardcoded\ number\ 2000\ and\ <\=\ 10\ and\ <\=1\ were\ trial\ and\ errored\ until\ I\ found\ a\ timing\ I\ liked.\r\n
 comment3.params=
 comment3.target=void\ prepareWorld()
-comment3.text=\r\n\ Method\ for\ World\ Preperation\r\n
+comment3.text=\r\n\ Method\ for\ World\ Preperation.\ Creates\ all\ the\ different\ objects\ in\ the\ world.\r\n
 comment4.params=
 comment4.target=int\ dogLocationX()
 comment4.text=\r\n\ 2\ methods\ for\ finding\ dog's\ location.\r\n

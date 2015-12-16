@@ -4,19 +4,23 @@ import java.awt.Font;
 
 
 /**
- * Write a description of class PocketLabel here.
+ * PocketLabel - Pocket Label is used to keep track of and display the amount of bones currently in the pocket.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Eric Davis 
+ * @version Version 1.0
  */
 public class PocketLabel extends Actor
 {
     
     public int pocketScore;
     
+    // This constant determines how many bones Sue can hold in her pocket.
     public final int MAX_AMOUNT = 10;
     
     
+    /**
+     * Constructor.
+     */
     public PocketLabel()
     {
               
@@ -102,12 +106,4 @@ public class PocketLabel extends Actor
     }
     
     
-    // CURRENTLY NOT USED
-    private void showLabel()
-    {
-        GreenfootImage scoreImage = new GreenfootImage(50, 15);
-        
-        scoreImage.drawString("Pocket", 10, 10);
-        setImage(scoreImage);
-    }
 }

@@ -1,10 +1,12 @@
 import greenfoot.*;
 
 /**
- * Write a description of class MyWorld here.
+ * This is the world! The world holds all of the different objects that interact with each other. Most of the objects will be declared public so them and their class
+ * methods can be accessed from other places in the program! When I started I used a separate method for each object to return a reference to it, but I have started
+ * switching out these methods and simply changing the variables here to public. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Eric Davis
+ * @version Version 1.1
  */
 public class MyWorld extends World
 {
@@ -53,7 +55,10 @@ public class MyWorld extends World
     }
     
     
-    
+    /**
+     * createBones      - Method called by the world's act procedure. This will generate a random number and then compare it to a range of values to create a bone
+     *                    The hardcoded number 2000 and <= 10 and <=1 were trial and errored until I found a timing I liked.
+     */
     private void createBones()
     {
         Bone bone = new Bone();
@@ -79,7 +84,7 @@ public class MyWorld extends World
     
     
     /**
-     * Method for World Preperation
+     * Method for World Preperation. Creates all the different objects in the world.
      */
     private void prepareWorld()
     {
