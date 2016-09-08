@@ -16,16 +16,16 @@ bones back! God speed.
 
 Sue's secret moves include:
 
---> Eating bones and depositing them into doghouse. 
+- Eating bones and depositing them into doghouse. 
     (move with "arrows" and hold "space" on doghouse with bones in inventory to add to score)
 
---> Peeing on fire hydrants
+- Peeing on fire hydrants
     (press "space" on a hydrant after eating a yellow bone to distract dog catcher)
 
---> Pooping
+- Pooping
     (press "p" when Sue is flashing brown (inventory is full) to poop. Costs bones from inventory.)
 
---> Catching squirrels
+- Catching squirrels
     (if a squirrel steals your bones, stop them before they get back to their tree to get them back.)
     (squirrels only appear after a certain score has been reached.)
 
