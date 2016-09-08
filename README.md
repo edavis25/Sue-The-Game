@@ -1,4 +1,4 @@
-# Sue-The-Game
+# Sue: The Game!
 Programmed by: Eric Davis
 
 Silly little game where Sue (the dog) runs around doing dog things.
