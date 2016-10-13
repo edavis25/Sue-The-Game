@@ -1,11 +1,10 @@
 # Sue: The Game!
 Programmed by: Eric Davis
 
+<img src="https://raw.githubusercontent.com/edavis25/Sue-The-Game/master/screenshots/Screenshot-cropped.jpg" alt="Screenshot" height=300px width=400px align=right />
 Silly little game where Sue (the dog) runs around doing dog things.
 
 "Sue - The Game 1.1.jar" file is a standalone executable.
-
-<img src="https://raw.githubusercontent.com/edavis25/Sue-The-Game/master/screenshots/Screenshot-cropped.jpg" alt="Screenshot" height=300px width=400px />
 
 ##### DESCRIPTION #####
 
