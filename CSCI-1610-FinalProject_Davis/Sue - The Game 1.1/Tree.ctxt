@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=Tree()
-comment0.text=\r\n\ Constructor.\ \ -\ There\ are\ 2\ different\ tree\ images\:\ (1)"tree1.png"\ and\ (2)"tree2.png"\ .\ The\ \r\n\ constructor\ will\ get\ a\ random\ number\ (1\ or\ 2)\ and\ then\ concatenate\ it\ to\ determine\ which\ one\ of\ the\ 2\r\n\ images\ the\ tree\ will\ use\ for\ variety's\ sake.\r\n
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Tree\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=2
