@@ -3,8 +3,9 @@ Programmed by: Eric Davis
 
 Silly little game where Sue (the dog) runs around doing dog things.
 
-"Sue - The Game 1.1.jar" file can be downloaded and then run as a standalone.
+"Sue - The Game 1.1.jar" file is a standalone executable.
 
+<img src="https://raw.githubusercontent.com/edavis25/Sue-The-Game/master/screenshots/Screenshot-cropped.jpg" alt="Screenshot" height=300px width=400px />
 
 ##### DESCRIPTION #####
 
@@ -17,16 +18,36 @@ bones back! God speed.
 Sue's secret moves include:
 
 - Eating bones and depositing them into doghouse. 
-    (move with "arrows" and hold "space" on doghouse with bones in inventory to add to score)
+    (move with <kbd>&larr; &uarr; &rarr; &darr;</kbd> and hold <kbd>space</kbd> on doghouse with bones in inventory to add to score)
 
 - Peeing on fire hydrants
-    (press "space" on a hydrant after eating a yellow bone to distract dog catcher)
+    (press <kbd>space</kbd> on a hydrant after eating a yellow bone to distract dog catcher)
 
 - Pooping
-    (press "p" when Sue is flashing brown (inventory is full) to poop. Costs bones from inventory.)
+    (press <kbd>p</kbd> when Sue is flashing brown (inventory is full) to poop. Costs bones from inventory.)
 
 - Catching squirrels
     (if a squirrel steals your bones, stop them before they get back to their tree to get them back.)
     (squirrels only appear after a certain score has been reached.)
 
+
+<style> kbd {
+padding:0.1em 0.6em;
+border:1px solid #ccc;
+font-size:11px;
+font-family:Arial,Helvetica,sans-serif;
+background-color:#f7f7f7;
+color:#333;
+-moz-box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+-webkit-box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+display:inline-block;
+margin:0 0.1em;
+text-shadow:0 1px 0 #fff;
+line-height:1.4;
+white-space:nowrap;
+} </style>
 
